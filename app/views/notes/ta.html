@@ -1,9 +1,19 @@
-<div data-ng-controller="taController">
-  <button data-ng-click="deleteAll()">Sacrifice All to the MonGOD</button>
-  NoteBody<input type="text" data-ng-model="newNote.noteBody">
-  Age<input type="text" data-ng-model="newNote.age">
-  Name<input type="text" data-ng-model="newNote.name">
-  <button data-ng-click="saveNewNote()">Save Note</button>
+<div data-ng-controller="notesController">
+
+<h1>Display page</h1>
+
+  <!-- <button data-ng-click="deleteAll()">Sacrifice All to the MonGOD</button>
+  <p>noteBody</p>
+  <input type="text" data-ng-model="newNote.noteBody">
+  <p>name</p>
+  <input type="text" data-ng-model="newNote.name">
+  <input type="text" data-ng-model="newNote.course">
+  <input type="text" data-ng-model="newNote.rtg1">
+  <input type="text" data-ng-model="newNote.rtg2">
+  <input type="text" data-ng-model="newNote.rtg3">
+  <input type="text" data-ng-model="newNote.note">
+
+  <button data-ng-click="saveNewNote()">Save Note</button> -->
   <div data-ng-repeat="note in notes">
     <p>
       <div data-ng-show="note.editing">
@@ -12,7 +22,8 @@
       </div>
 
       <div data-ng-hide="note.editing">
-        {{note.noteBody}} , {{note.name}} , {{note.age}}
+        {{note.noteBody}} |||| {{note.name}} |||| {{note.course}} |||| {{note.rtg1}}
+        |||| {{note.rtg2}} |||| {{note.rtg3}} |||| {{note.note}}
         <button data-ng-click="editNote(note)">Edit Note</button>
         <button data-ng-click="deleteNote(note)">Delete Note</button>
       </div>
