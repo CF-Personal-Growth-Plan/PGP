@@ -14,9 +14,13 @@ notesApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'views/notes/notes.html',
       controller: 'notesController'
     })
+    .when('/select', {
+      templateUrl: 'views/notes/select.html',
+      controller: 'notesController'
+    })
     .when('/ta', {
       templateUrl: 'views/notes/ta.html',
-      controller: 'taController'
+      controller: 'notesController'
     })
     .otherwise({
       redirectTo: '/notes'
