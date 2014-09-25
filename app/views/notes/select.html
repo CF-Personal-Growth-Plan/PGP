@@ -1,0 +1,41 @@
+<div data-ng-controller="notesController">
+  <h1>Please select a student to create a new Personalize Growth Plan</h1>
+  <select>
+    <option ng-class="{}"ng-repeat="note in notes">
+      {{note.name}}
+    </option>
+  </select>
+
+  <article class="newSurvey">
+    <form class="newSurvey_form">
+      <fieldset>
+        <legend>Student Information</legend>
+        <label class="newSurvey_form-text" data-ng-model="note.name"></label>
+        <label class="newSurvey_form-text" data-ng-model="note.course"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Student's Self Assesment</legend>
+        <label class="newSurvey_form-lbl">HTML</label>
+        <label class="newSurvey_form-lbl" data-ng-model="note.rtg1"></label>
+        <label class="newSurvey_form-lbl">CSS</label>
+        <label class="newSurvey_form-lbl" data-ng-model="note.rtg2"></label>
+        <label class="newSurvey_form-lbl">Javascript</label>
+        <label class="newSurvey_form-lbl" data-ng-model="note.rtg3"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Goals</legend>
+        <textarea readonly class="newSurvey_form-text" type="text" data-ng-model="note.note"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Questions/Concerns?</legend>
+        <textarea class="newSurvey_form-text" type="text" data-ng-model="note.noteBody"></textarea>
+      </fieldset>
+
+      <button>Save PGP</button>
+
+    </form>
+  </article>
+</div>

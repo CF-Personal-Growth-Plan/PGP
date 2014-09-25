@@ -2,6 +2,8 @@
 
 module.exports = function(app) {
   app.controller('notesController', function($scope, $http) {
+    $scope.select = 1;
+
     $scope.getAllNotes = function() {
       $http({
         method: 'GET',
