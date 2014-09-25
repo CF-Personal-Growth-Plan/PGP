@@ -1,11 +1,8 @@
 <div data-ng-controller="notesController">
   <button data-ng-click="deleteAll()">Sacrifice All to the MonGOD</button>
   NoteBody<input type="text" data-ng-model="newNote.noteBody">
+  Age<input type="text" data-ng-model="newNote.age">
   Name<input type="text" data-ng-model="newNote.name">
-  Course<input type="text" data-ng-model="newNote.course">
-  rtg1<input type="text" data-ng-model="newNote.rtg1">
-  rtg2<input type="text" data-ng-model="newNote.rtg2">
-  rtg3<input type="text" data-ng-model="newNote.rtg3">
   <button data-ng-click="saveNewNote()">Save Note</button>
   <div data-ng-repeat="note in notes">
     <p>
@@ -15,7 +12,7 @@
       </div>
 
       <div data-ng-hide="note.editing">
-        {{note.noteBody}} , {{note.name}} , {{note.rtg1}} , {{note.rtg2}} , {{note.rtg3}}
+        {{note.noteBody}} , {{note.name}} , {{note.age}}
         <button data-ng-click="editNote(note)">Edit Note</button>
         <button data-ng-click="deleteNote(note)">Delete Note</button>
       </div>
