@@ -6,7 +6,8 @@ var noteSchema = mongoose.Schema({
   course: String,
   rtg1: String,
   rtg2: String,
-  rtg3: String
+  rtg3: String,
+  note: String
 });
 
 module.exports = mongoose.model('Note', noteSchema);
