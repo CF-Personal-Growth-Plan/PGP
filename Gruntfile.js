@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       dev: {
         expand: true,
         cwd: 'app/',
-        src: ['*.html', '*.css', 'views/**/*.html'],
+        src: ['*.html', 'css/*.css', 'img/*.png', 'views/**/*.html'],
         dest: 'build/',
         filter: 'isFile'
       }
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 
     watch: {
       angulartest: {
-        files: ['app/js/**/*.js', 'app/index.html', 'app/views/**/*.html'],
+        files: ['app/js/**/*.js', 'app/index.html', 'app/views/**/*.html', 'css/*.css', 'img/*.png'],
         tasks: ['browserify:angulartest', 'karma:unit'],
         options: {
           spawn: false

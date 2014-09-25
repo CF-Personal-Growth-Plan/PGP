@@ -1,0 +1,44 @@
+/***** General Form Styles *****/
+
+.newSurvey {
+  background-color: #e0ddd1;
+  width: 100%;
+  padding: 2%;
+  border-radius: 2%;
+}
+
+.newSurvey_form {
+  font-family: "Droid Serif", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+/***** Name & Course Fieldset *****/
+
+legend {
+  margin-top: 1%;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.newSurvey_form-info {
+  border: solid 2px red;
+  display: block;
+  margin:  2em auto;
+}
+
+.newSurvey_form-lbl {
+  position: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  margin-top: 1%;
+  font-size: 1.5rem;
+}
+
+.newSurvey_form-textarea {
+  width: 100%;
+}

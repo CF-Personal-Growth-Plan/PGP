@@ -5,8 +5,10 @@
     <form class="newSurvey_form">
       <fieldset>
         <legend>Student Information</legend>
-        <input class="newSurvey_form-text" placeholder="Name" type="text" data-ng-model="newNote.name">
-        <input class="newSurvey_form-text" placeholder="Course" type="text" data-ng-model="newNote.course">
+        <div class="newSurvey_form-info">
+          <input placeholder="Name" type="text" data-ng-model="newNote.info">
+          <input placeholder="Course" type="text" data-ng-model="newNote.course">
+        </div>
       </fieldset>
 
       <fieldset>
@@ -23,21 +25,20 @@
 
       <fieldset>
         <legend>Goals</legend>
-        <textarea class="newSurvey_form-text" placeholder="What would you like to do with your new skills?" type="text" data-ng-model="newNote.note"></textarea>
+        <textarea rows="10" class="newSurvey_form-textarea" placeholder="What would you like to do with your new skills?" type="text" data-ng-model="newNote.note"></textarea>
       </fieldset>
 
       <fieldset>
         <legend>Questions/Concerns?</legend>
-        <textarea class="newSurvey_form-text" placeholder="Please share any questions or concerns you may have." type="text" data-ng-model="newNote.noteBody"></textarea>
+        <textarea rows="10" class="newSurvey_form-textarea" placeholder="Please share any questions or concerns you may have." type="text" data-ng-model="newNote.noteBody"></textarea>
       </fieldset>
 
-      <button data-ng-click="saveNewNote()">Save Note</button>
+      <button data-ng-click="saveNewNote()">Submit</button>
 
     </form>
   </article>
 
-
-    <div data-ng-repeat="note in notes">
+  <div data-ng-repeat="note in notes">
       <p>
         {{"Student: " + note.name}}
       </p>
