@@ -56,6 +56,14 @@ input[placeholder="Course"] {
   padding-left: 2rem;
 }
 
+textarea[readonly] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+}
+
 .newSurvey_form-text {
   text-align: center;
   font-size: 1.5rem;

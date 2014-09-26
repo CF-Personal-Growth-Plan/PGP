@@ -1,34 +1,16 @@
 <div data-ng-controller="notesController">
-  <h1>Please select a student to create a new Personalize Growth Plan</h1>
-
-
-
+  
   <article class="newSurvey">
     <form class="newSurvey_form">
 
       <fieldset>
-        <legend>Student Information</legend>
+        <legend>Please Select A Student</legend>
 
         <select ng-model="selectedNote" ng-options="note.name for note in notes">
         </select>
         <!-- <label class="newSurvey_form-text">{{selectedNote.name}}</label> -->
 
         <label class="newSurvey_form-text">{{selectedNote.course}}</label>
-      </fieldset>
-
-      <fieldset>
-        <legend>Student's Self Assesment</legend>
-        <label class="newSurvey_form-lbl">HTML</label>
-        <label class="newSurvey_form-lbl">{{selectedNote.rtg1}}</label>
-        <textarea readonly class="newSurvey_form-text" ng-model="selectedNote.rec1"></textarea>
-
-        <label class="newSurvey_form-lbl">CSS</label>
-        <label class="newSurvey_form-lbl">{{selectedNote.rtg2}}</label>
-        <textarea readonly class="newSurvey_form-text" ng-model="selectedNote.rec2"></textarea>
-
-        <label class="newSurvey_form-lbl">Javascript</label>
-        <label class="newSurvey_form-lbl">{{selectedNote.rtg3}}</label>
-        <textarea readonly class="newSurvey_form-text" ng-model="selectedNote.rec3"></textarea>
       </fieldset>
 
       <fieldset>
@@ -40,6 +22,23 @@
         <legend>Questions/Concerns?</legend>
         <textarea readonly class="newSurvey_form-text">{{selectedNote.note}}</textarea>
       </fieldset>
+
+      <fieldset>
+        <legend>Student's Self Assessment</legend>
+        <label class="newSurvey_form-lbl">HTML:</label>
+        <label class="newSurvey_form-lbl">{{selectedNote.rtg1}}</label>
+        <textarea rows="10" class="newSurvey_form-text" ng-model="selectedNote.rec1"></textarea>
+
+        <label class="newSurvey_form-lbl">CSS:</label>
+        <label class="newSurvey_form-lbl">{{selectedNote.rtg2}}</label>
+        <textarea rows="10" class="newSurvey_form-text" ng-model="selectedNote.rec2"></textarea>
+
+        <label class="newSurvey_form-lbl">Javascript:</label>
+        <label class="newSurvey_form-lbl">{{selectedNote.rtg3}}</label>
+        <textarea rows="10" class="newSurvey_form-text" ng-model="selectedNote.rec3"></textarea>
+      </fieldset>
+
+
 
       <button data-ng-click="saveNote(selectedNote)">Save PGP</button>
 
