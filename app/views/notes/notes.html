@@ -1,25 +1,27 @@
 <div data-ng-controller="notesController">
 <!------ HEAD ------>
-
   <article class="newSurvey">
+
     <form class="newSurvey_form">
-      <fieldset>
+
+      <fieldset class="newSurvey_form-info">
         <legend>Student Information</legend>
-        <div class="newSurvey_form-info">
-          <input placeholder="Name" type="text" data-ng-model="newNote.name">
+          <input placeholder="Name" type="text" data-ng-model="newNote.info">
           <input placeholder="Course" type="text" data-ng-model="newNote.course">
-        </div>
       </fieldset>
 
-      <fieldset>
-        <legend>Self Assesment</legend>
+      <section>
+        <h1>Self Assessment</h1>
         <p>We want to help you reach your goals. We've seen the work you've truned in. Now, we need your help answering the follwing questions, so we can create a Personalized Growth Plan for you.</p>
-        <p>How do you rate yourself on a scale from 1 to 10 (1 being "I have no idea?", 5 being "I understand the concept", 10 being "I feel really confident in implementing these") in the following areas:</p>
-        <label class="newSurvey_form-lbl">HTML</label>
+        <p>How do you rate yourself on a scale from 1 to 10 (1 being "I have no idea?", 5 being "I understand the concept", 10 being "I feel really confident") in the following areas:</p>
+      </section>
+
+      <fieldset class="newSurvey_form-sbj">
+        <label class="newSurvey_form-lbl">HTML:</label>
         <input class="newSurvey_form-text" placeholder="1-10" type="text" data-ng-model="newNote.rtg1">
-        <label class="newSurvey_form-lbl">CSS</label>
+        <label class="newSurvey_form-lbl">CSS:</label>
         <input class="newSurvey_form-text" placeholder="1-10" type="text" data-ng-model="newNote.rtg2">
-        <label class="newSurvey_form-lbl">Javascript</label>
+        <label class="newSurvey_form-lbl">Javascript:</label>
         <input class="newSurvey_form-text" placeholder="1-10" type="text" data-ng-model="newNote.rtg3">
       </fieldset>
 
@@ -33,14 +35,10 @@
         <textarea rows="10" class="newSurvey_form-textarea" placeholder="Please share any questions or concerns you may have." type="text" data-ng-model="newNote.noteBody"></textarea>
       </fieldset>
 
-      <button data-ng-click="saveNewNote()">Submit</button>
+      <button data-ng-click="saveNewNote()">SUBMIT</button>
 
     </form>
+
   </article>
 
-  <div data-ng-repeat="note in notes">
-      <p>
-        {{"Student: " + note.name}}
-      </p>
-    </div>
-=======
+</div>

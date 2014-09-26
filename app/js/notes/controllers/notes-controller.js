@@ -38,6 +38,8 @@ module.exports = function(app) {
         .error(function(data, status) {
           console.log(data);
         });
+      alert("Your self-assessment has been submitted. Thank you!");
+
     };
 
     $scope.editNote = function(note) {
