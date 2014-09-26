@@ -22,11 +22,19 @@ legend, h1, .newSurvey-h1 {
   font-weight: bold;
 }
 
+.newSurvey_select {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 input[placeholder="Name"],
 input[placeholder="Course"] {
   font-size: 1.5rem;
 }
 
+.newSurvey_form-info
 .newSurvey_form-sbj {
   display: block;
   text-align: center;
@@ -35,33 +43,12 @@ input[placeholder="Course"] {
   margin-bottom: 2rem;
 }
 
-.newSurvey_form-info {
-  display: block;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin:  2em auto;
-}
-
 .newSurvey_form-lbl {
   position: center;
   margin-left: auto;
   margin-right: auto;
   font-style: italic;
   font-weight: 700;
-}
-
-.data {
-  display: block;
-  padding-left: 2rem;
-}
-
-textarea[readonly] {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-
 }
 
 .newSurvey_form-text {
@@ -92,6 +79,6 @@ button {
   font-family: "Rajdhani", sans-serif;
   font-size: 1.5em;
   font-weight: bold;
-  width: 60%;
+  width: 40%;
   border-radius: 5rem;
 }

@@ -3,7 +3,7 @@
   <article class="newSurvey">
     <form class="newSurvey_form">
 
-      <fieldset>
+      <fieldset class="newSurvey_select">
         <legend>Please Select A Student</legend>
 
         <select ng-model="selectedNote" ng-options="note.name for note in notes">
@@ -15,27 +15,27 @@
 
       <fieldset>
         <legend>Goals</legend>
-        <textarea readonly class="newSurvey_form-text" >{{selectedNote.goal}}</textarea>
+        <label rows="10" readonly class="newSurvey_form-textarea" >{{selectedNote.goal}}</label>
       </fieldset>
 
       <fieldset>
         <legend>Questions/Concerns?</legend>
-        <textarea readonly class="newSurvey_form-text">{{selectedNote.note}}</textarea>
+        <label rows="10" readonly class="newSurvey_form-textarea">{{selectedNote.note}}</label>
       </fieldset>
 
       <fieldset>
-        <legend>Student's Self Assessment</legend>
+        <legend>Student's Skill Assessment By Topic</legend>
         <label class="newSurvey_form-lbl">HTML:</label>
         <label class="newSurvey_form-lbl">{{selectedNote.rtg1}}</label>
-        <textarea rows="10" class="newSurvey_form-text" ng-model="selectedNote.rec1"></textarea>
+        <textarea rows="10" class="newSurvey_form-textarea" placeholder="Please enter recommendations here" ng-model="selectedNote.rec1"></textarea>
 
         <label class="newSurvey_form-lbl">CSS:</label>
         <label class="newSurvey_form-lbl">{{selectedNote.rtg2}}</label>
-        <textarea rows="10" class="newSurvey_form-text" ng-model="selectedNote.rec2"></textarea>
+        <textarea rows="10" placeholder="Please enter recommendations here" class="newSurvey_form-textarea" ng-model="selectedNote.rec2"></textarea>
 
         <label class="newSurvey_form-lbl">Javascript:</label>
         <label class="newSurvey_form-lbl">{{selectedNote.rtg3}}</label>
-        <textarea rows="10" class="newSurvey_form-text" ng-model="selectedNote.rec3"></textarea>
+        <textarea rows="10" placeholder="Please enter recommendations here" class="newSurvey_form-textarea" ng-model="selectedNote.rec3"></textarea>
       </fieldset>
 
 
