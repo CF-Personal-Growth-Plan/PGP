@@ -29,6 +29,16 @@ legend, h1, .newSurvey-h1 {
   margin-right: auto;
 }
 
+.newSurvey_form-output-lbl {
+  font-weight: bold;
+  font-style: italic;
+  display: block;
+}
+
+.newSurvey_form-output {
+  display: block;
+}
+
 select {
   font-size: 2rem;
 }
