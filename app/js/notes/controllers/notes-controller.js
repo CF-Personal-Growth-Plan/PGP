@@ -3,24 +3,13 @@
 module.exports = function(app) {
   app.controller('notesController', function($scope, $http) {
 
-    $scope.colors = [
-      {name:'black', shade:'dark'},
-      {name:'white', shade:'light'},
-      {name:'red', shade:'dark'},
-      {name:'blue', shade:'dark'},
-      {name:'yellow', shade:'light'}
-    ];
-
-    $scope.myColor = $scope.colors[2]; // red
-
-
-
     $scope.getAllNotes = function() {
       $http({
         method: 'GET',
         url: '/api/v_0_0_1/notes'
       }).success(function(data) {
         $scope.notes = data;
+        $scope.selectedNote = $scope.notes[0];
       }).error(function(data, status) {
         console.log('error!');
         console.log(data);
@@ -39,7 +28,6 @@ module.exports = function(app) {
           console.log(data);
         });
       alert("Your self-assessment has been submitted. Thank you!");
-
     };
 
     $scope.editNote = function(note) {

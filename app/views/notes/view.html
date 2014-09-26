@@ -1,5 +1,5 @@
 <div data-ng-controller="notesController">
-  <h1>Please select a student to create a new Personalize Growth Plan</h1>
+  <h1>Your Personalized Growth Plan is complete! Please select your name from the list below to view.</h1>
 
   <select ng-model="selectedNote" ng-options="note.name for note in notes">
   </select>
@@ -8,7 +8,6 @@
     <form class="newSurvey_form">
       <fieldset>
         <legend>Student Information</legend>
-
         <label class="newSurvey_form-text">{{selectedNote.name}}</label>
 
         <label class="newSurvey_form-text">{{selectedNote.course}}</label>
@@ -17,27 +16,27 @@
       <fieldset>
         <legend>Student's Self Assesment</legend>
         <label class="newSurvey_form-lbl">HTML</label>
-        <label class="newSurvey_form-lbl">{{selectedNote.rtg1}}</label>
+        <label class="newSurvey_form-lbl data">{{selectedNote.rtg1}}</label>
+        <!-- <label class="newSurvey_form-lbl data">{{selectedNote.rec1}}</label> -->
 
         <label class="newSurvey_form-lbl">CSS</label>
-        <label class="newSurvey_form-lbl">{{selectedNote.rtg2}}</label>
+        <label class="newSurvey_form-lbl data">{{selectedNote.rtg2}}</label>
+        <!-- <label class="newSurvey_form-lbl data">{{selectedNote.rec2}}</label> -->
 
         <label class="newSurvey_form-lbl">Javascript</label>
-        <label class="newSurvey_form-lbl">{{selectedNote.rtg3}}</label>
+        <label class="newSurvey_form-lbl data">{{selectedNote.rtg3}}</label>
+        <!-- <label class="newSurvey_form-lbl data">{{selectedNote.rec3}}</label> -->
       </fieldset>
 
       <fieldset>
         <legend>Goals</legend>
-        <textarea class="newSurvey_form-text" ng-model="selectedNote.note"></textarea>
+        <textarea readonly class="newSurvey_form-text">{{selectedNote.note}}</textarea>
       </fieldset>
 
       <fieldset>
         <legend>Questions/Concerns?</legend>
-        <textarea class="newSurvey_form-text">{{selectedNote.goal}}</textarea>
+        <textarea readonly class="newSurvey_form-text">{{selectedNote.goal}}</textarea>
       </fieldset>
-
-      <button data-ng-click="saveNote(selectedNote)">Save PGP</button>
-
     </form>
   </article>
 </div>

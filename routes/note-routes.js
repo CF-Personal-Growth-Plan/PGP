@@ -11,7 +11,8 @@ module.exports = function(app) {
   });
 
   app.post(baseUrl, function(req, res) {
-    var note = new Note(req.body); 
+    console.log(req.body);
+    var note = new Note(req.body);
     note.save(function(err, resNote) {
       if (err) return res.status(500).json(err);
       return res.send(resNote);
