@@ -1,41 +1,26 @@
 <div data-ng-controller="notesController">
-  <h1>Your Personalized Growth Plan is complete! Please select your name from the list below to view.</h1>
-
-  <select ng-model="selectedNote" ng-options="note.name for note in notes">
-  </select>
-
   <article class="newSurvey">
     <form class="newSurvey_form">
       <fieldset>
-        <legend>Student Information</legend>
-        <label class="newSurvey_form-text">{{selectedNote.name}}</label>
-
+        <h1>Your Personalized Growth Plan is complete! Please select your name below to view.</h1>
+        <select ng-model="selectedNote" ng-options="note.name for note in notes">
+        </select>
         <label class="newSurvey_form-text">{{selectedNote.course}}</label>
       </fieldset>
 
       <fieldset>
         <legend>Student's Self Assessment</legend>
-        <label class="newSurvey_form-lbl">HTML</label>
-        <label class="newSurvey_form-lbl data">{{selectedNote.rtg1}}</label>
-        <!-- <label class="newSurvey_form-lbl data">{{selectedNote.rec1}}</label> -->
+        <label class="newSurvey_form-lbl">HTML:</label>
+        <label class="newSurvey_form-lbl">{{selectedNote.rec1}}</label>
 
-        <label class="newSurvey_form-lbl">CSS</label>
-        <label class="newSurvey_form-lbl data">{{selectedNote.rtg2}}</label>
-        <!-- <label class="newSurvey_form-lbl data">{{selectedNote.rec2}}</label> -->
+        <label class="newSurvey_form-lbl">CSS:</label>
+        <label class="newSurvey_form-lbl">{{selectedNote.rec2}}</label>
 
-        <label class="newSurvey_form-lbl">Javascript</label>
-        <label class="newSurvey_form-lbl data">{{selectedNote.rtg3}}</label>
-        <!-- <label class="newSurvey_form-lbl data">{{selectedNote.rec3}}</label> -->
-      </fieldset>
+        <label class="newSurvey_form-lbl">Javascript:</label>
+        <label class="newSurvey_form-lbl">{{selectedNote.rec3}}</label>
 
-      <fieldset>
-        <legend>Goals</legend>
-        <textarea readonly class="newSurvey_form-text">{{selectedNote.note}}</textarea>
-      </fieldset>
-
-      <fieldset>
-        <legend>Questions/Concerns?</legend>
-        <textarea readonly class="newSurvey_form-text">{{selectedNote.goal}}</textarea>
+         <label class="newSurvey_form-lbl">Instructor's Notes:</label>
+        <label class="newSurvey_form-lbl">{{selectedNote.feedbk}}</label>
       </fieldset>
     </form>
   </article>
