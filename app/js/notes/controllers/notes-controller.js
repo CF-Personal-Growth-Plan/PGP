@@ -12,7 +12,6 @@ module.exports = function(app) {
         $scope.selectedNote = $scope.notes[0];
       }).error(function(data, status) {
         console.log('error!');
-        console.log(data);
         console.log(status);
       });
     };
